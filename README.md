@@ -1,6 +1,6 @@
 # 📋 Quản Lý Danh Sách Thí Sinh
 
-![Build](https://github.com/<username>/CandidateManagement/actions/workflows/build.yml/badge.svg)
+![Build](https://github.com/nhom8_CTDL/CandidateManagement/actions/workflows/build.yml/badge.svg)
 ![Language](https://img.shields.io/badge/language-C%2B%2B17-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows%20WSL-lightgrey.svg)
@@ -348,18 +348,6 @@ Kết quả : O(n/26) → O(1)
 
 Tổng hợp: thêm 100,000 thí sinh: 187,000 ms → 80 ms  (↓ 2,300×)
 ```
-
----
-
-## 👥 Thành viên nhóm
-
-| STT | Họ và tên | MSSV | Đóng góp |
-|:---:|-----------|------|----------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-
----
 
 ## 📚 Tài liệu tham khảo
 
