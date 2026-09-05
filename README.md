@@ -21,7 +21,6 @@
 - [Hướng dẫn sử dụng](#-hướng-dẫn-sử-dụng)
 - [Định dạng file dữ liệu](#-định-dạng-file-dữ-liệu)
 - [Đánh giá hiệu năng](#-đánh-giá-hiệu-năng)
-- [Thành viên nhóm](#-thành-viên-nhóm)
 
 ---
 
