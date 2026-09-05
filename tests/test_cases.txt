@@ -1,0 +1,116 @@
+================================================================
+  TEST CASES - QUAN LY DANH SACH THI SINH
+  Hash Table + Linked List | C++17
+================================================================
+
+--- TC01: THEM THI SINH HOP LE ---
+Input : Ma=999001, HoTen="tran van binh", GioiTinh=Nam, NgaySinh=01/01/2006, QueQuan=Ha Noi
+KetQua: Them thanh cong, ten duoc chuan hoa "Tran Van Binh", hash vao bucket [B]
+
+--- TC02: THEM TRUNG MA DU THI ---
+Input : Ma=240101 (da ton tai), HoTen="Nguyen Van X"
+KetQua: Thong bao "Ma da ton tai", yeu cau nhap lai
+
+--- TC03: THEM TEN MOT TU ---
+Input : Ma=999002, HoTen="An"
+KetQua: Ten duoc giu nguyen "An", hash vao bucket [A]
+
+--- TC04: THEM VOI KHOANG TRANG THUA ---
+Input : Ma=999003, HoTen="  le    thi   mai  "
+KetQua: Ten chuan hoa thanh "Le Thi Mai", hash vao bucket [M]
+
+--- TC05: TRA CUU MA DUNG ---
+Input : Ma=240101
+KetQua: Hien thi "Nguyen Van An | Nam | 15/05/2005 | Ha Noi"
+HieuSuat: O(n) trong bucket, trung binh O(n/26)
+
+--- TC06: TRA CUU MA KHONG TON TAI ---
+Input : Ma=999999
+KetQua: "Khong tim thay"
+
+--- TC07: TRA CUU TEN DUNG ---
+Input : Ten="An"
+KetQua: 2 ket qua: Nguyen Van An, Nguyen Thi Anh
+(Vi "An" la substring cua "Anh")
+
+--- TC08: TRA CUU TEN MOT PHAN ---
+Input : Ten="Ng"
+KetQua: Tat ca thi sinh co "Ng" trong ten (Nguyen, Ngoc, Nhi...)
+
+--- TC09: XOA THI SINH TON TAI ---
+Input : Ma=240101
+KetQua: Xac nhan -> Xoa thanh cong, totalCount giam 1
+
+--- TC10: XOA THI SINH KHONG TON TAI ---
+Input : Ma=999999
+KetQua: "Khong tim thay"
+
+--- TC11: SAP XEP TEN A->Z (30 thi sinh) ---
+KetQua mong doi (theo ten - tu cuoi):
+  1  An      - Nguyen Van An
+  2  Anh     - Nguyen Thi Anh
+  3  Bao     - Tran Van Bao
+  4  Binh    - Tran Thi Binh
+  5  Chi     - Le Thi Chi
+  6  Cuong   - Le Hoang Cuong
+  7  Duc     - Hoang Van Duc
+  8  Dung    - Pham Thi Dung
+  9  Em      - Pham Van Em
+  10 Hang    - Hoang Thi Hang
+  11 Hoa     - Vu Thi Hoa
+  12 Hung    - Dang Van Hung
+  13 Khoa    - Vu Van Khoa
+  14 Lan     - Bui Thi Lan
+  15 Linh    - Dang Thi Linh
+  16 Manh    - Bui Van Manh
+  17 Minh    - Ngo Van Minh
+  18 Nam     - Trinh Van Nam
+  19 Ngoc    - Duong Thi Ngoc
+  20 Nhi     - Ngo Thi Nhi
+  21 Oanh    - Ly Thi Oanh
+  22 Phong   - Duong Van Phong
+  23 Phuc    - Phan Van Phuc
+  24 Quynh   - Dinh Thi Quynh
+  25 Son     - Mai Van Son
+  26 Tam     - Cao Thi Tam
+  27 Thang   - Truong Van Thang
+  28 Uyen    - Ho Thi Uyen
+  29 Vinh    - Luu Van Vinh
+  30 Xuan    - To Thi Xuan
+Thuat toan: Merge Sort | Do phuc tap: O(n log n)
+
+--- TC12: PHAN 3 PHONG (30 thi sinh, Round-Robin) ---
+Input : n=3
+Phan bo theo bucket A->Z, xoay vong 0->1->2->0->...
+  Phong 1 (10 TS): An, Bao, Dung, Hoa, Khoa, Minh, Nam, Phuc, Son, Uyen
+  Phong 2 (10 TS): Anh, Cuong, Duc, Hung, Lan, Manh, Ngoc, Phong, Tam, Vinh
+  Phong 3 (10 TS): Bao, Chi, Em, Hang, Linh, Nhi, Oanh, Quynh, Thang, Xuan
+(Chuc cai dau khac nhau trong moi phong -> xac suat trung toi thieu)
+
+--- TC13: PHAN 1 PHONG ---
+Input : n=1
+KetQua: 1 phong chua tat ca 30 thi sinh
+
+--- TC14: PHAN 30 PHONG ---
+Input : n=30
+KetQua: Moi phong 1 thi sinh, chu cai dau luon khac nhau giua cac phong
+
+--- TC15: LUU FILE ---
+KetQua: candidates.txt ghi dung dinh dang "ID|Ho Ten|Gioi|NgaySinh|QueQuan"
+       So dong = tong so thi sinh
+
+--- TC16: DOC FILE CO LOI DINH DANG ---
+File test: them dong "BAD_LINE_NO_PIPE" va "ID|Ten" (thieu truong)
+KetQua: Canh bao dong loi, bo qua dong sai, tiep tuc doc dong dung
+
+--- TC17: HIEU NANG - 10,000 THI SINH ---
+Them: ~O(1) moi them | Tong: O(n)
+Tim kiem theo ID: O(n/26) ~ O(385) so sanh
+Sap xep: O(n log n) = O(10000 * 13) ~ 130,000 phep tinh
+Phan phong n=50: O(n) = O(10000)
+
+--- TC18: HIEU NANG - 100,000 THI SINH ---
+Tim kiem theo ID: O(n/26) ~ O(3846) so sanh (van rat nhanh)
+Sap xep: O(n log n) = O(100000 * 17) ~ 1,700,000 phep tinh
+Ket luan: Hash Table giam tai tim kiem xuong 26 lan so voi Linear Search
+================================================================

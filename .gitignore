@@ -1,0 +1,47 @@
+# ─── Compiled binaries ────────────────────────────────────────────────────────
+candidate_manager
+tests/benchmark
+
+# ─── Object files ─────────────────────────────────────────────────────────────
+obj/
+*.o
+*.a
+*.so
+*.out
+
+# ─── Build directories ─────────────────────────────────────────────────────────
+build/
+dist/
+
+# ─── Benchmark output files ────────────────────────────────────────────────────
+data/benchmark_*.txt
+
+# ─── IDE / Editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.vcxproj.user
+.vs/
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ─── Windows ──────────────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Linux ────────────────────────────────────────────────────────────────────
+*~
+.nfs*
+
+# ─── CMake (nếu dùng sau này) ─────────────────────────────────────────────────
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake

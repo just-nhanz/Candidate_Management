@@ -1,0 +1,70 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-linux:
+    name: Build on Ubuntu (GCC)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install GCC
+        run: sudo apt-get install -y g++
+
+      - name: Build main program
+        run: |
+          g++ -std=c++17 -Wall -Wextra -O2 -I include \
+            main.cpp \
+            src/Candidate.cpp src/Node.cpp src/LinkedList.cpp \
+            src/HashTable.cpp src/CandidateSorter.cpp \
+            src/GroupManager.cpp src/RoomManager.cpp \
+            src/FileManager.cpp src/CandidateManager.cpp \
+            -o candidate_manager
+
+      - name: Build benchmark
+        run: |
+          g++ -std=c++17 -O2 -I include \
+            tests/benchmark.cpp \
+            src/Candidate.cpp src/Node.cpp src/LinkedList.cpp \
+            src/HashTable.cpp src/CandidateSorter.cpp \
+            src/FileManager.cpp \
+            -o tests/benchmark
+
+      - name: Run smoke test (load file + display sorted + stats)
+        run: |
+          printf "5\n10\n0\n" | ./candidate_manager
+
+      - name: Run benchmark (n=100 only for CI speed)
+        run: ./tests/benchmark 2>&1 | head -20
+
+      - name: Upload binary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate_manager-linux
+          path: candidate_manager
+
+  build-macos:
+    name: Build on macOS (Clang)
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build main program
+        run: |
+          g++ -std=c++17 -Wall -Wextra -O2 -I include \
+            main.cpp \
+            src/Candidate.cpp src/Node.cpp src/LinkedList.cpp \
+            src/HashTable.cpp src/CandidateSorter.cpp \
+            src/GroupManager.cpp src/RoomManager.cpp \
+            src/FileManager.cpp src/CandidateManager.cpp \
+            -o candidate_manager
+
+      - name: Run smoke test
+        run: printf "10\n0\n" | ./candidate_manager

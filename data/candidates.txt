@@ -1,0 +1,30 @@
+240101|Nguyen Van An|Nam|15/05/2005|Ha Noi
+240102|Tran Thi Binh|Nu|20/08/2004|Da Nang
+240103|Le Hoang Cuong|Nam|01/01/2005|Hai Phong
+240104|Pham Thi Dung|Nu|22/03/2004|TP.HCM
+240105|Hoang Van Duc|Nam|10/07/2005|Nghe An
+240106|Vu Thi Hoa|Nu|05/06/2004|Hue
+240107|Dang Van Hung|Nam|19/08/2005|Can Tho
+240108|Bui Thi Lan|Nu|11/12/2004|Ha Noi
+240109|Ngo Van Minh|Nam|03/04/2005|Quang Ninh
+240110|Duong Thi Ngoc|Nu|27/01/2005|Binh Duong
+240111|Trinh Van Nam|Nam|16/05/2004|Ha Noi
+240112|Ly Thi Oanh|Nu|08/10/2005|TP.HCM
+240113|Phan Van Phuc|Nam|23/07/2004|Dong Nai
+240114|Dinh Thi Quynh|Nu|12/03/2005|Ha Noi
+240115|Mai Van Son|Nam|07/09/2004|Thanh Hoa
+240116|Cao Thi Tam|Nu|29/11/2005|Ha Noi
+240117|Truong Van Thang|Nam|18/06/2004|Nghe An
+240118|Ho Thi Uyen|Nu|04/02/2005|TP.HCM
+240119|Luu Van Vinh|Nam|21/08/2004|Da Nang
+240120|To Thi Xuan|Nu|13/04/2005|Ha Noi
+240121|Nguyen Thi Anh|Nu|06/07/2004|Hai Phong
+240122|Tran Van Bao|Nam|25/10/2005|Ha Noi
+240123|Le Thi Chi|Nu|17/01/2004|TP.HCM
+240124|Pham Van Em|Nam|09/05/2005|Can Tho
+240125|Hoang Thi Hang|Nu|31/03/2004|Hue
+240126|Vu Van Khoa|Nam|20/12/2005|Ha Noi
+240127|Dang Thi Linh|Nu|02/09/2004|Da Nang
+240128|Bui Van Manh|Nam|14/06/2005|TP.HCM
+240129|Ngo Thi Nhi|Nu|26/02/2004|Ha Noi
+240130|Duong Van Phong|Nam|10/11/2005|Nghe An
